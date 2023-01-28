@@ -4,7 +4,8 @@
   "description": "backend of simple ecommerce",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "./node-modules/.bin/netlify-lambda serve src",
+    "build": "./node-modules/.bin/netlify-lambda build src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sajan Rangari",
@@ -15,6 +16,7 @@
     "mongoose": "^6.4.6",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
+    "netlify-lambda": "^2.0.15",
     "nodemon": "^2.0.19"
   }
 }
