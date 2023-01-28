@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const serverless = require("serverless-http");
 var cors = require("cors");
 
 const app = new express();
@@ -35,3 +36,6 @@ mongoose
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
+
+module.exports = app;
+module.exports.handler = serverless(app);
